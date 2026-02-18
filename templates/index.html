@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LED Wheel Probability Cracker</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="main-card">
+
+    <h1>🎡 LED Wheel Probability Cracker</h1>
+
+    <form method="POST" class="btn-group">
+        <button name="action" value="normal" class="btn green">Normal</button>
+        <button name="action" value="cheat" class="btn orange">Cheat</button>
+        <button name="action" value="compare" class="btn blue">Compare</button>
+    </form>
+
+    {% if result %}
+    <div class="result-grid">
+        <div class="box">Swag<br><span>{{ result.swag }}</span></div>
+        <div class="box">Boosters<br><span>{{ result.booster }}</span></div>
+        <div class="box">Rare<br><span>{{ result.rare }}</span></div>
+        <div class="box">Tricky<br><span>{{ result.tricky }}</span></div>
+    </div>
+
+    <div class="score-box">
+        Total Score: {{ result.score }}
+    </div>
+    {% endif %}
+
+    {% if compare %}
+    <div class="compare-box">
+        <p>Normal Score: {{ compare.normal.score }}</p>
+        <p>Cheat Score: {{ compare.cheat.score }}</p>
+        <h2>{{ compare.verdict }}</h2>
+    </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
