@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#4f46e5,#9333ea,#06b6d4);
+    background-size: 300% 300%;
+    animation: bgMove 10s infinite alternate;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes bgMove {
+    0% {background-position: left;}
+    100% {background-position: right;}
+}
+
+.main-card {
+    width: 750px;
+    padding: 40px;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+}
+
+h1 {
+    margin-bottom: 25px;
+    text-shadow: 0 0 15px white;
+}
+
+/* buttons */
+.btn-group {
+    margin-bottom: 25px;
+}
+
+.btn {
+    padding: 14px 25px;
+    margin: 8px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+}
+
+.green { background:#22c55e; }
+.orange { background:#f97316; }
+.blue { background:#3b82f6; }
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px white;
+}
+
+/* result grid */
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.box {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 18px;
+}
+
+.box span {
+    font-size: 28px;
+    font-weight: bold;
+    color: #facc15;
+}
+
+/* score */
+.score-box {
+    margin-top: 25px;
+    font-size: 24px;
+    background: #22c55e;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+/* compare */
+.compare-box {
+    margin-top: 25px;
+    padding: 20px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 15px;
+}
